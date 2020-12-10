@@ -8,6 +8,7 @@ import Footer from './components/Shared/Footer/Footer';
 import Home from './components/Home/Home';
 import Posts from './components/Posts/Posts';
 import About from './components/About/About';
+import PostDetails from './containers/Posts/PostDetails';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/posts' component={Posts} />
+              <Route exact path='/posts/1' component={PostDetails} />
               <Route exact path='/about' component={About} />
             </Switch>
         </div>

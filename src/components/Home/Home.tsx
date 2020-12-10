@@ -1,38 +1,15 @@
-import React, { useReducer, useState } from 'react';
-import { Button, Container, Grid, Icon, Paper} from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
+import React from 'react';
+import { Container, Grid, Typography, Paper, Button} from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      '& .MuiTextField-root': {
-        margin: theme.spacing(1),
-        width: '25ch',
-      },
-    },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
     },
-    button: {
-      margin: theme.spacing(1)
-    },
-    leftIcon: {
-      marginRight: theme.spacing(1)
-    },
-    rightIcon: {
-      marginLeft: theme.spacing(1)
-    },
-    iconSmall: {
-      fontSize: 20
-    },
-    textField: {
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
-      width: 400
-    }
   }),
 );
 
@@ -43,15 +20,14 @@ const Home = () => {
   return (
     <Container>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Paper className={classes.paper}>
-
-            
-          </Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            List
+            <Typography variant="h3" component="h3" gutterBottom>
+              Welcome to My <br />React + TS + Material UI + Redux + Saga App!
+            </Typography>
+            <Link to='/posts'>
+              <Button variant="contained" color="primary">View Posts</Button>
+            </Link>
           </Paper>
         </Grid>
       </Grid>
