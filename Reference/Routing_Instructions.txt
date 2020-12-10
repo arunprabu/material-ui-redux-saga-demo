@@ -1,0 +1,41 @@
+0. What are the urls? 
+    localhost:3000      - Home 
+    localhost:3000/posts  - Posts 
+    localhost:3000/about  - About
+
+1. Create Functional Components 
+      Home, About, Posts  
+
+2. Install the packages 
+    npm i react-router react-router-dom @types/react-router @types/react-router-dom
+
+3. In App.tsx 
+    Setup routing 
+    import { BrowserRouter as Router, Switch } from 'react-router-dom';
+
+    Place the whole app inside  <Router>
+
+4. And config the routes, in between header and footer
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/posts' component={Posts} />
+      <Route exact path='/about' component={About} />
+    </Switch>
+
+5. Add the links in Header comp. -- Refer the file for more styles
+    <Typography>
+      { /* The following Link component is from react-router-dom */ }
+        <Link to='/' className={classes.linkBtn}>
+          <Button variant="contained" color="default">Home</Button>
+        </Link>
+        <Link to='/posts' className={classes.linkBtn}>
+          <Button variant="contained" color="default">Posts</Button>
+        </Link>
+        <Link to='/about' className={classes.linkBtn}>
+          <Button variant="contained" color="default">About</Button>
+        </Link>
+    </Typography>
+
+Check the app 
+===
+
